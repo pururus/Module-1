@@ -46,12 +46,12 @@ class Linear(minitorch.Module):
             out = 0.0
             for i in range(len(inputs)):
                 out += inputs[i] * self.weights[i][j].value
-            
+
             out += self.bias[j].value
             output.append(out)
-        
+
         return output
-            
+
 
 def default_log_fn(epoch, total_loss, correct, losses):
     print("Epoch ", epoch, " loss ", total_loss, "correct", correct)
